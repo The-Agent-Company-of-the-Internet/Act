@@ -13,3 +13,6 @@
 //     throw createError({ statusCode: 401, statusMessage: "Unauthorized" })
 //   }
 // })
+
+
+export default defineEventHandler(async(event) => {})
