@@ -1,0 +1,7 @@
+<template>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="24" height="24" fill="#121212"/>
+    <rect x="9.60001" y="9.60001" width="4.8" height="4.8" stroke="white" stroke-width="0.2"/>
+    <rect x="8.39999" y="8.39999" width="7.2" height="7.2" stroke="white" stroke-width="0.2"/>
+  </svg>
+</template>
