@@ -58,18 +58,12 @@ onMounted(async () => {
           <span class="font-sans text-xs text-[#FFFFFF]">Add agent</span>
         </NuxtLink>
       </div>
-      <div class="overflow-y-scroll gap-y-1 py-1 flex flex-col h-full w-full" v-if="agent_list.length > 1">
-        <div class="w-full" v-for="agents in agent_list" :key="agents.id">
-          <AgentCard
-            :agentName="agents.name"
-            :status="agents.status"
-            :description="agents.description"
-            :scopes="agents.scope"
-            :budget="parseFloat(agents.budgetCents / 100)"
-            :timestamp="agents.createdAt"
-            :id="agents.id"
-          />
-        </div>
+      <div class="overflow-y-scroll gap-y-1 py-1 flex flex-col bg-[#FFFFFF] rounded-md h-full w-full" v-if="agent_list.length > 1">
+        <AgentCard
+          v-for="agent in agent_list"
+          :key="agent.id"
+          :agent="agent"
+        />
       </div>
       <div class="overflow-hidden py-1 flex justify-center items-center h-full w-full bg-[#FFFFFF] border border-[#D9D9D9] rounded-md" v-else>
         <span class="font-sans text-sm text-[#555555] font-medium">You have no agents created</span>
