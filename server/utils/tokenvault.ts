@@ -18,7 +18,7 @@ function connectToAuth() {
 
 export function withSlackAccess(access_token: string) {
   const auth0AI = connectToAuth();
-  auth0AI.withTokenVault({
+  return auth0AI.withTokenVault({
     connection: "slack",
     scopes: [
       'chat:write',
